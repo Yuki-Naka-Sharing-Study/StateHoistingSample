@@ -1,9 +1,9 @@
 package com.example.statehoistingsample.viewmodel
 
 import androidx.lifecycle.ViewModel
+import com.example.statehoistingsample.screen.ClientType
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import com.example.statehoistingsample.ClientType
 
 class ClientFormViewModel : ViewModel() {
 
