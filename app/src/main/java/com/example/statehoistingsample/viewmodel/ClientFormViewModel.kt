@@ -6,23 +6,22 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
 class ClientFormViewModel : ViewModel() {
-
     private val _uiState = MutableStateFlow(ClientFormUiState())
     val uiState: StateFlow<ClientFormUiState> = _uiState
 
-    fun onClientTypeChange(type: ClientType) {
+    fun updateClientType(type: ClientType) {
         _uiState.value = _uiState.value.copy(clientType = type)
     }
 
-    fun onNameChange(name: String) {
+    fun updateName(name: String) {
         _uiState.value = _uiState.value.copy(name = name)
     }
 
-    fun onCompanyNameChange(companyName: String) {
+    fun updateCompanyName(companyName: String) {
         _uiState.value = _uiState.value.copy(companyName = companyName)
     }
 
-    fun onContactNameChange(contactName: String) {
+    fun updateContactName(contactName: String) {
         _uiState.value = _uiState.value.copy(contactName = contactName)
     }
 }
