@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -75,4 +76,34 @@ fun ClientForm(
             Text("送信")
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ClientForm_Personal_Preview() {
+    ClientForm(
+        clientType = ClientType.Personal,
+        onClientTypeChange = {},
+        name = "田中 太郎",
+        onNameChange = {},
+        companyName = "",
+        onCompanyNameChange = {},
+        contactName = "",
+        onContactNameChange = {}
+    )
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ClientForm_Corporate_Preview() {
+    ClientForm(
+        clientType = ClientType.Corporate,
+        onClientTypeChange = {},
+        name = "",
+        onNameChange = {},
+        companyName = "株式会社テック",
+        onCompanyNameChange = {},
+        contactName = "山田 花子",
+        onContactNameChange = {}
+    )
 }
